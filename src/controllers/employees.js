@@ -12,3 +12,16 @@ export const postEmployee = async (req, res) => {
     const { rows } = await pool.query(cadena)
     res.json(rows[0])
 }
+
+export const getEmployees = async (req, res) => {
+    const { rows } = await pool.query('select * from employees')
+    res.json(rows)
+}
+
+export const getEmployee = async (req, res) => {
+    const { id } = req.params
+    const { rows } = await pool.query(`select * from employees where id=${id}`)
+
+    if (rows.length == 0) { return res.status(404).json({ message: "User not found" }) }
+    res.json(rows[0])
+}
