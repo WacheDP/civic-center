@@ -6,6 +6,7 @@ import EmployeesRoutes from "./routes/employees.routes.js";
 import InformationRoutes from "./routes/information.routes.js";
 import ExchangeratesRoutes from "./routes/exchangerates.routes.js";
 import VacationsRoutes from "./routes/vacations.routes.js";
+import UsersRoutes from "./routes/users.routes.js";
 
 const app = express()
 
@@ -18,6 +19,7 @@ app.use(EmployeesRoutes)
 app.use(InformationRoutes)
 app.use(ExchangeratesRoutes)
 app.use(VacationsRoutes)
+app.use(UsersRoutes)
 
 app.listen(PORT_SERVER)
 console.log("Servidor " + PORT_SERVER + " en linea")
