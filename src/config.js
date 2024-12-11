@@ -1,5 +1,4 @@
 export const PORT_SERVER = 4000
-
 export const USER = "postgres"
 export const HOST = "localhost"
 export const PASSWORD = "12345678"
